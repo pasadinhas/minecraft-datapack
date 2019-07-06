@@ -1,5 +1,15 @@
 {
+  "type": "minecraft:entity",
   "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "vanilla:entities/silverfish"
+        }
+      ]
+    },
     {
       "conditions": [
         {
@@ -32,12 +42,15 @@
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 4
+                "max": 3
               }
             },
             {
               "function": "looting_enchant",
-              "count": 1
+              "count": {
+                "min": 0,
+                "max": 1
+              }
             }
           ]
         }
